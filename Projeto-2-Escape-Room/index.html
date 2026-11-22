@@ -18,6 +18,14 @@
       </div>
       <div class="header-actions">
         <span class="top-status"><span class="status-light"></span> SISTEMA DE FUGA</span>
+        <div class="music-controls" role="group" aria-label="Trilha sonora da missão">
+          <label for="music-file" class="music-file-label" title="Escolher música em arquivo autorizado">♫ Escolher música</label>
+          <input id="music-file" type="file" accept="audio/*,.mp3,.ogg,.wav,.m4a" aria-label="Escolha um arquivo de áudio autorizado">
+          <button id="music-play" class="music-action" type="button" disabled aria-label="Reproduzir ou pausar música">▶</button>
+          <label class="music-volume-label" for="music-volume">Volume</label>
+          <input id="music-volume" type="range" min="0" max="100" value="24" aria-label="Volume da música">
+          <span id="music-status" role="status" aria-live="polite">Sem música</span>
+        </div>
         <label class="audio-toggle" for="sound"><input id="sound" type="checkbox" checked><span class="switch" aria-hidden="true"></span><span>Som <span class="sound-label">ativado</span></span></label>
         <button id="quit" class="button button-quiet" type="button" aria-label="Reiniciar partida">↻ <span>Reiniciar</span></button>
       </div>

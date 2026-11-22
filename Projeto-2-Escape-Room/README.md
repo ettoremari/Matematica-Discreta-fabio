@@ -25,3 +25,9 @@ Cinco fases, com 1, 2, 2, 3 e 4 acertos necessários, respectivamente (12 ao tod
 Para disponibilizar na internet, ative o GitHub Pages em **Settings → Pages → Deploy from a branch**, selecione a branch `main` e a pasta `/ (root)`, caso a página esteja na raiz de um repositório dedicado. Como este projeto está em uma subpasta de um repositório de disciplina, o caminho do jogo após a ativação do Pages na raiz será `/Projeto-2-Escape-Room/`.
 
 Antes da entrega, a equipe deve testar o funcionamento do jogo, conferir as resoluções matemáticas e preparar a demonstração.
+
+## Trilha sonora opcional
+
+Na barra superior, clique em **Escolher música** para selecionar um arquivo de áudio do seu dispositivo (MP3, OGG, WAV ou M4A). A música toca em repetição e possui controles de pausa e volume independentes dos efeitos do jogo. Caso o navegador bloqueie o início do áudio, clique em **Reproduzir**. A seleção é local e precisa ser refeita após recarregar a página.
+
+Se quiser utilizar **Rockin' in the Free World**, selecione uma cópia do áudio para a qual tenha autorização de uso. O repositório não inclui a gravação nem faz download de serviços de streaming.

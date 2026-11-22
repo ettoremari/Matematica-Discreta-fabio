@@ -193,3 +193,55 @@ $('quit').addEventListener('click',() => {
 $('sound').addEventListener('change', e => {
   document.querySelector('.audio-toggle').setAttribute('aria-label',e.target.checked?'Efeitos sonoros ativados':'Efeitos sonoros desativados');
 });
+
+
+/* Trilha opcional: o jogador seleciona um arquivo de áudio local que pode utilizar.
+   O projeto não distribui gravações comerciais nem baixa músicas automaticamente. */
+const backgroundTrack = new Audio();
+backgroundTrack.loop = true;
+backgroundTrack.volume = 0.24;
+backgroundTrack.preload = 'none';
+let trackUrl = null;
+const musicButton = $('music-play');
+const musicStatus = $('music-status');
+function syncMusicButton() {
+  musicButton.textContent = backgroundTrack.paused ? '▶' : '❚❚';
+  musicButton.setAttribute('aria-label',backgroundTrack.paused?'Reproduzir música':'Pausar música');
+}
+$('music-file').addEventListener('change', async e => {
+  const file = e.target.files?.[0];
+  if (!file) return;
+  if (!file.type.startsWith('audio/') && !/\.(mp3|ogg|wav|m4a)$/i.test(file.name)) {
+    musicStatus.textContent='Selecione um arquivo de áudio válido.';
+    return;
+  }
+  backgroundTrack.pause();
+  backgroundTrack.removeAttribute('src');
+  backgroundTrack.load();
+  if (trackUrl) URL.revokeObjectURL(trackUrl);
+  trackUrl = URL.createObjectURL(file);
+  backgroundTrack.src = trackUrl;
+  musicStatus.textContent = file.name.length > 28 ? file.name.slice(0,25)+'…' : file.name;
+  musicStatus.title = file.name;
+  musicButton.disabled=false;
+  syncMusicButton();
+  try { await backgroundTrack.play(); }
+  catch (_) { musicStatus.title = 'Clique em reproduzir para ouvir '+file.name; }
+  syncMusicButton();
+});
+musicButton.addEventListener('click', async () => {
+  if (!backgroundTrack.src) return;
+  if (!backgroundTrack.paused) backgroundTrack.pause();
+  else {
+    try { await backgroundTrack.play(); }
+    catch (_) { musicStatus.textContent='Não foi possível reproduzir o arquivo.'; }
+  }
+  syncMusicButton();
+});
+$('music-volume').addEventListener('input',e => { backgroundTrack.volume=Number(e.target.value)/100; });
+backgroundTrack.addEventListener('ended',syncMusicButton);
+backgroundTrack.addEventListener('error',() => {
+  musicStatus.textContent='Formato de áudio não suportado.';
+  backgroundTrack.pause();
+  syncMusicButton();
+});

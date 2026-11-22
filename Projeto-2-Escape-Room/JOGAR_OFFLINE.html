@@ -68,6 +68,19 @@ body[data-phase="5"] .scene-visual{background:radial-gradient(ellipse at 50% 48%
 @media(max-width:360px){.identity-copy strong{font-size:9px}.identity-copy small{font-size:7px}.room span{font-size:8px}.challenge-pin{display:none}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 
+
+/* Controles independentes para música de fundo selecionada pelo jogador */
+.music-controls{display:flex;align-items:center;flex-wrap:wrap;gap:8px;border:1px solid #314654;background:#12212e;border-radius:12px;padding:7px 9px;max-width:100%}
+.music-file-label,.music-action{border:1px solid #3d6570;background:#1b3440;color:#bff8eb;border-radius:8px;padding:8px 10px;cursor:pointer;font-family:inherit;font-size:12px;white-space:nowrap}
+.music-file-label:hover,.music-action:hover:not(:disabled){background:#29505b}
+#music-file{position:absolute;width:1px;height:1px;opacity:0;overflow:hidden}
+#music-file:focus-visible+.music-action,.music-file-label:focus-within{outline:2px solid #a4eada;outline-offset:2px}
+.music-action:disabled{opacity:.45;cursor:not-allowed}
+.music-volume-label{font-size:11px;color:#c0cfd5}
+#music-volume{width:74px;accent-color:#7de4c8}
+#music-status{font-size:10px;color:#9bc2c1;max-width:120px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media(max-width:760px){.header-actions{flex-wrap:wrap;justify-content:flex-end;gap:8px}.music-controls{order:3;width:100%;justify-content:flex-end}.music-file-label{padding:7px}#music-status{max-width:105px}}
+
 </style>
 </head>
 <body>
@@ -80,6 +93,14 @@ body[data-phase="5"] .scene-visual{background:radial-gradient(ellipse at 50% 48%
       </div>
       <div class="header-actions">
         <span class="top-status"><span class="status-light"></span> SISTEMA DE FUGA</span>
+        <div class="music-controls" role="group" aria-label="Trilha sonora da missão">
+          <label for="music-file" class="music-file-label" title="Escolher música em arquivo autorizado">♫ Escolher música</label>
+          <input id="music-file" type="file" accept="audio/*,.mp3,.ogg,.wav,.m4a" aria-label="Escolha um arquivo de áudio autorizado">
+          <button id="music-play" class="music-action" type="button" disabled aria-label="Reproduzir ou pausar música">▶</button>
+          <label class="music-volume-label" for="music-volume">Volume</label>
+          <input id="music-volume" type="range" min="0" max="100" value="24" aria-label="Volume da música">
+          <span id="music-status" role="status" aria-live="polite">Sem música</span>
+        </div>
         <label class="audio-toggle" for="sound"><input id="sound" type="checkbox" checked><span class="switch" aria-hidden="true"></span><span>Som <span class="sound-label">ativado</span></span></label>
         <button id="quit" class="button button-quiet" type="button" aria-label="Reiniciar partida">↻ <span>Reiniciar</span></button>
       </div>
@@ -355,6 +376,57 @@ $('quit').addEventListener('click',() => {
 });
 $('sound').addEventListener('change', e => {
   document.querySelector('.audio-toggle').setAttribute('aria-label',e.target.checked?'Efeitos sonoros ativados':'Efeitos sonoros desativados');
+});
+
+/* Trilha opcional: o jogador seleciona um arquivo de áudio local que pode utilizar.
+   O projeto não distribui gravações comerciais nem baixa músicas automaticamente. */
+const backgroundTrack = new Audio();
+backgroundTrack.loop = true;
+backgroundTrack.volume = 0.24;
+backgroundTrack.preload = 'none';
+let trackUrl = null;
+const musicButton = $('music-play');
+const musicStatus = $('music-status');
+function syncMusicButton() {
+  musicButton.textContent = backgroundTrack.paused ? '▶' : '❚❚';
+  musicButton.setAttribute('aria-label',backgroundTrack.paused?'Reproduzir música':'Pausar música');
+}
+$('music-file').addEventListener('change', async e => {
+  const file = e.target.files?.[0];
+  if (!file) return;
+  if (!file.type.startsWith('audio/') && !/\.(mp3|ogg|wav|m4a)$/i.test(file.name)) {
+    musicStatus.textContent='Selecione um arquivo de áudio válido.';
+    return;
+  }
+  backgroundTrack.pause();
+  backgroundTrack.removeAttribute('src');
+  backgroundTrack.load();
+  if (trackUrl) URL.revokeObjectURL(trackUrl);
+  trackUrl = URL.createObjectURL(file);
+  backgroundTrack.src = trackUrl;
+  musicStatus.textContent = file.name.length > 28 ? file.name.slice(0,25)+'…' : file.name;
+  musicStatus.title = file.name;
+  musicButton.disabled=false;
+  syncMusicButton();
+  try { await backgroundTrack.play(); }
+  catch (_) { musicStatus.title = 'Clique em reproduzir para ouvir '+file.name; }
+  syncMusicButton();
+});
+musicButton.addEventListener('click', async () => {
+  if (!backgroundTrack.src) return;
+  if (!backgroundTrack.paused) backgroundTrack.pause();
+  else {
+    try { await backgroundTrack.play(); }
+    catch (_) { musicStatus.textContent='Não foi possível reproduzir o arquivo.'; }
+  }
+  syncMusicButton();
+});
+$('music-volume').addEventListener('input',e => { backgroundTrack.volume=Number(e.target.value)/100; });
+backgroundTrack.addEventListener('ended',syncMusicButton);
+backgroundTrack.addEventListener('error',() => {
+  musicStatus.textContent='Formato de áudio não suportado.';
+  backgroundTrack.pause();
+  syncMusicButton();
 });
 
 </script>
