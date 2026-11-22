@@ -24,4 +24,4 @@ Cinco fases, com 1, 2, 2, 3 e 4 acertos necessários, respectivamente (12 ao tod
 
 Para disponibilizar na internet, ative o GitHub Pages em **Settings → Pages → Deploy from a branch**, selecione a branch `main` e a pasta `/ (root)`, caso a página esteja na raiz de um repositório dedicado. Como este projeto está em uma subpasta de um repositório de disciplina, o caminho do jogo após a ativação do Pages na raiz será `/Projeto-2-Escape-Room/`.
 
-Este trabalho foi desenvolvido como auxílio acadêmico. A equipe deve compreender, testar e validar as questões e o funcionamento antes da entrega.
+Antes da entrega, a equipe deve testar o funcionamento do jogo, conferir as resoluções matemáticas e preparar a demonstração.
