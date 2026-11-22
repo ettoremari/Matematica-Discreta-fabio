@@ -1,0 +1,402 @@
+[
+  {
+    "id": "F1-01",
+    "fase": 1,
+    "enunciado": "Na Câmara de Entrada, há 2 opções de portais, 3 de símbolos e 4 de chaves. Quantas escolhas completas diferentes são possíveis?",
+    "resposta": 24,
+    "resolucao": "Pelo Princípio Fundamental da Contagem, multiplicamos as opções independentes: 2 × 3 × 4 = 24.",
+    "assunto": "Princípio Fundamental da Contagem"
+  },
+  {
+    "id": "F1-02",
+    "fase": 1,
+    "enunciado": "Na Câmara de Entrada, há 3 opções de alavancas, 4 de cristais e 2 de selos. Quantas escolhas completas diferentes são possíveis?",
+    "resposta": 24,
+    "resolucao": "Pelo Princípio Fundamental da Contagem, multiplicamos as opções independentes: 3 × 4 × 2 = 24.",
+    "assunto": "Princípio Fundamental da Contagem"
+  },
+  {
+    "id": "F1-03",
+    "fase": 1,
+    "enunciado": "Na Câmara de Entrada, há 4 opções de corredores, 3 de portas e 3 de códigos. Quantas escolhas completas diferentes são possíveis?",
+    "resposta": 36,
+    "resolucao": "Pelo Princípio Fundamental da Contagem, multiplicamos as opções independentes: 4 × 3 × 3 = 36.",
+    "assunto": "Princípio Fundamental da Contagem"
+  },
+  {
+    "id": "F1-04",
+    "fase": 1,
+    "enunciado": "Na Câmara de Entrada, há 5 opções de interruptores, 2 de painéis e 4 de luzes. Quantas escolhas completas diferentes são possíveis?",
+    "resposta": 40,
+    "resolucao": "Pelo Princípio Fundamental da Contagem, multiplicamos as opções independentes: 5 × 2 × 4 = 40.",
+    "assunto": "Princípio Fundamental da Contagem"
+  },
+  {
+    "id": "F1-05",
+    "fase": 1,
+    "enunciado": "Na Câmara de Entrada, há 3 opções de máscaras, 5 de luvas e 2 de cartões. Quantas escolhas completas diferentes são possíveis?",
+    "resposta": 30,
+    "resolucao": "Pelo Princípio Fundamental da Contagem, multiplicamos as opções independentes: 3 × 5 × 2 = 30.",
+    "assunto": "Princípio Fundamental da Contagem"
+  },
+  {
+    "id": "F1-06",
+    "fase": 1,
+    "enunciado": "Na Câmara de Entrada, há 4 opções de cabos, 4 de conectores e 2 de sensores. Quantas escolhas completas diferentes são possíveis?",
+    "resposta": 32,
+    "resolucao": "Pelo Princípio Fundamental da Contagem, multiplicamos as opções independentes: 4 × 4 × 2 = 32.",
+    "assunto": "Princípio Fundamental da Contagem"
+  },
+  {
+    "id": "F1-07",
+    "fase": 1,
+    "enunciado": "Na Câmara de Entrada, há 2 opções de salas, 5 de armários e 5 de fichas. Quantas escolhas completas diferentes são possíveis?",
+    "resposta": 50,
+    "resolucao": "Pelo Princípio Fundamental da Contagem, multiplicamos as opções independentes: 2 × 5 × 5 = 50.",
+    "assunto": "Princípio Fundamental da Contagem"
+  },
+  {
+    "id": "F1-08",
+    "fase": 1,
+    "enunciado": "Na Câmara de Entrada, há 3 opções de rotas, 3 de escadas e 4 de elevadores. Quantas escolhas completas diferentes são possíveis?",
+    "resposta": 36,
+    "resolucao": "Pelo Princípio Fundamental da Contagem, multiplicamos as opções independentes: 3 × 3 × 4 = 36.",
+    "assunto": "Princípio Fundamental da Contagem"
+  },
+  {
+    "id": "F1-09",
+    "fase": 1,
+    "enunciado": "Na Câmara de Entrada, há 5 opções de botões, 3 de cores e 2 de formatos. Quantas escolhas completas diferentes são possíveis?",
+    "resposta": 30,
+    "resolucao": "Pelo Princípio Fundamental da Contagem, multiplicamos as opções independentes: 5 × 3 × 2 = 30.",
+    "assunto": "Princípio Fundamental da Contagem"
+  },
+  {
+    "id": "F1-10",
+    "fase": 1,
+    "enunciado": "Na Câmara de Entrada, há 4 opções de terminais, 2 de antenas e 5 de frequências. Quantas escolhas completas diferentes são possíveis?",
+    "resposta": 40,
+    "resolucao": "Pelo Princípio Fundamental da Contagem, multiplicamos as opções independentes: 4 × 2 × 5 = 40.",
+    "assunto": "Princípio Fundamental da Contagem"
+  },
+  {
+    "id": "F2-01",
+    "fase": 2,
+    "enunciado": "O painel de anagramas exibe LETRA. Quantas sequências distintas podem ser formadas usando todas as letras exatamente uma vez?",
+    "resposta": 120,
+    "resolucao": "Permutação com repetição: 5! / (1) = 120. As letras iguais não produzem sequências novas.",
+    "assunto": "Permutação simples/com repetição"
+  },
+  {
+    "id": "F2-02",
+    "fase": 2,
+    "enunciado": "O painel de anagramas exibe RADAR. Quantas sequências distintas podem ser formadas usando todas as letras exatamente uma vez?",
+    "resposta": 30,
+    "resolucao": "Permutação com repetição: 5! / (2! × 2!) = 30. As letras iguais não produzem sequências novas.",
+    "assunto": "Permutação simples/com repetição"
+  },
+  {
+    "id": "F2-03",
+    "fase": 2,
+    "enunciado": "O painel de anagramas exibe CASA. Quantas sequências distintas podem ser formadas usando todas as letras exatamente uma vez?",
+    "resposta": 12,
+    "resolucao": "Permutação com repetição: 4! / (2!) = 12. As letras iguais não produzem sequências novas.",
+    "assunto": "Permutação simples/com repetição"
+  },
+  {
+    "id": "F2-04",
+    "fase": 2,
+    "enunciado": "O painel de anagramas exibe ARARA. Quantas sequências distintas podem ser formadas usando todas as letras exatamente uma vez?",
+    "resposta": 10,
+    "resolucao": "Permutação com repetição: 5! / (3! × 2!) = 10. As letras iguais não produzem sequências novas.",
+    "assunto": "Permutação simples/com repetição"
+  },
+  {
+    "id": "F2-05",
+    "fase": 2,
+    "enunciado": "O painel de anagramas exibe SALA. Quantas sequências distintas podem ser formadas usando todas as letras exatamente uma vez?",
+    "resposta": 12,
+    "resolucao": "Permutação com repetição: 4! / (2!) = 12. As letras iguais não produzem sequências novas.",
+    "assunto": "Permutação simples/com repetição"
+  },
+  {
+    "id": "F2-06",
+    "fase": 2,
+    "enunciado": "O painel de anagramas exibe BANANA. Quantas sequências distintas podem ser formadas usando todas as letras exatamente uma vez?",
+    "resposta": 60,
+    "resolucao": "Permutação com repetição: 6! / (3! × 2!) = 60. As letras iguais não produzem sequências novas.",
+    "assunto": "Permutação simples/com repetição"
+  },
+  {
+    "id": "F2-07",
+    "fase": 2,
+    "enunciado": "O painel de anagramas exibe MALA. Quantas sequências distintas podem ser formadas usando todas as letras exatamente uma vez?",
+    "resposta": 12,
+    "resolucao": "Permutação com repetição: 4! / (2!) = 12. As letras iguais não produzem sequências novas.",
+    "assunto": "Permutação simples/com repetição"
+  },
+  {
+    "id": "F2-08",
+    "fase": 2,
+    "enunciado": "O painel de anagramas exibe TETO. Quantas sequências distintas podem ser formadas usando todas as letras exatamente uma vez?",
+    "resposta": 12,
+    "resolucao": "Permutação com repetição: 4! / (2!) = 12. As letras iguais não produzem sequências novas.",
+    "assunto": "Permutação simples/com repetição"
+  },
+  {
+    "id": "F2-09",
+    "fase": 2,
+    "enunciado": "O painel de anagramas exibe OSSO. Quantas sequências distintas podem ser formadas usando todas as letras exatamente uma vez?",
+    "resposta": 6,
+    "resolucao": "Permutação com repetição: 4! / (2! × 2!) = 6. As letras iguais não produzem sequências novas.",
+    "assunto": "Permutação simples/com repetição"
+  },
+  {
+    "id": "F2-10",
+    "fase": 2,
+    "enunciado": "O painel de anagramas exibe LIVRO. Quantas sequências distintas podem ser formadas usando todas as letras exatamente uma vez?",
+    "resposta": 120,
+    "resolucao": "Permutação com repetição: 5! / (1) = 120. As letras iguais não produzem sequências novas.",
+    "assunto": "Permutação simples/com repetição"
+  },
+  {
+    "id": "F3-01",
+    "fase": 3,
+    "enunciado": "Na Sala dos Guardiões, existem 5 candidatos distintos. É preciso selecionar dois guardiões para cargos diferentes, sem repetir candidatos. De quantas maneiras isso pode ser feito?",
+    "resposta": 20,
+    "resolucao": "Como a ordem importa, usamos arranjo simples: A(5,2) = 5! / (5−2)! = 20.",
+    "assunto": "Arranjo simples"
+  },
+  {
+    "id": "F3-02",
+    "fase": 3,
+    "enunciado": "Na Sala dos Guardiões, existem 6 candidatos distintos. É preciso definir comandante e vice-comandante, sem repetir candidatos. De quantas maneiras isso pode ser feito?",
+    "resposta": 30,
+    "resolucao": "Como a ordem importa, usamos arranjo simples: A(6,2) = 6! / (6−2)! = 30.",
+    "assunto": "Arranjo simples"
+  },
+  {
+    "id": "F3-03",
+    "fase": 3,
+    "enunciado": "Na Sala dos Guardiões, existem 7 candidatos distintos. É preciso atribuir primeiro, segundo e terceiro sensores, sem repetir candidatos. De quantas maneiras isso pode ser feito?",
+    "resposta": 210,
+    "resolucao": "Como a ordem importa, usamos arranjo simples: A(7,3) = 7! / (7−3)! = 210.",
+    "assunto": "Arranjo simples"
+  },
+  {
+    "id": "F3-04",
+    "fase": 3,
+    "enunciado": "Na Sala dos Guardiões, existem 5 candidatos distintos. É preciso organizar três posições de vigilância, sem repetir candidatos. De quantas maneiras isso pode ser feito?",
+    "resposta": 60,
+    "resolucao": "Como a ordem importa, usamos arranjo simples: A(5,3) = 5! / (5−3)! = 60.",
+    "assunto": "Arranjo simples"
+  },
+  {
+    "id": "F3-05",
+    "fase": 3,
+    "enunciado": "Na Sala dos Guardiões, existem 8 candidatos distintos. É preciso designar operador e substituto, sem repetir candidatos. De quantas maneiras isso pode ser feito?",
+    "resposta": 56,
+    "resolucao": "Como a ordem importa, usamos arranjo simples: A(8,2) = 8! / (8−2)! = 56.",
+    "assunto": "Arranjo simples"
+  },
+  {
+    "id": "F3-06",
+    "fase": 3,
+    "enunciado": "Na Sala dos Guardiões, existem 6 candidatos distintos. É preciso ocupar três assentos numerados, sem repetir candidatos. De quantas maneiras isso pode ser feito?",
+    "resposta": 120,
+    "resolucao": "Como a ordem importa, usamos arranjo simples: A(6,3) = 6! / (6−3)! = 120.",
+    "assunto": "Arranjo simples"
+  },
+  {
+    "id": "F3-07",
+    "fase": 3,
+    "enunciado": "Na Sala dos Guardiões, existem 7 candidatos distintos. É preciso escolher líder e explorador, sem repetir candidatos. De quantas maneiras isso pode ser feito?",
+    "resposta": 42,
+    "resolucao": "Como a ordem importa, usamos arranjo simples: A(7,2) = 7! / (7−2)! = 42.",
+    "assunto": "Arranjo simples"
+  },
+  {
+    "id": "F3-08",
+    "fase": 3,
+    "enunciado": "Na Sala dos Guardiões, existem 8 candidatos distintos. É preciso colocar três pilotos em postos distintos, sem repetir candidatos. De quantas maneiras isso pode ser feito?",
+    "resposta": 336,
+    "resolucao": "Como a ordem importa, usamos arranjo simples: A(8,3) = 8! / (8−3)! = 336.",
+    "assunto": "Arranjo simples"
+  },
+  {
+    "id": "F3-09",
+    "fase": 3,
+    "enunciado": "Na Sala dos Guardiões, existem 9 candidatos distintos. É preciso definir primeiro e segundo códigos, sem repetir candidatos. De quantas maneiras isso pode ser feito?",
+    "resposta": 72,
+    "resolucao": "Como a ordem importa, usamos arranjo simples: A(9,2) = 9! / (9−2)! = 72.",
+    "assunto": "Arranjo simples"
+  },
+  {
+    "id": "F3-10",
+    "fase": 3,
+    "enunciado": "Na Sala dos Guardiões, existem 6 candidatos distintos. É preciso preencher quatro posições numeradas, sem repetir candidatos. De quantas maneiras isso pode ser feito?",
+    "resposta": 360,
+    "resolucao": "Como a ordem importa, usamos arranjo simples: A(6,4) = 6! / (6−4)! = 360.",
+    "assunto": "Arranjo simples"
+  },
+  {
+    "id": "F4-01",
+    "fase": 4,
+    "enunciado": "No Cofre de Seleção, há 6 fusíveis diferentes. O mecanismo exige escolher 2 deles, sem considerar a ordem. Quantos grupos podem ser formados?",
+    "resposta": 15,
+    "resolucao": "A ordem não importa: C(6,2) = 6! / (2! × (6−2)!) = 15.",
+    "assunto": "Combinação simples"
+  },
+  {
+    "id": "F4-02",
+    "fase": 4,
+    "enunciado": "No Cofre de Seleção, há 7 fragmentos diferentes. O mecanismo exige escolher 3 deles, sem considerar a ordem. Quantos grupos podem ser formados?",
+    "resposta": 35,
+    "resolucao": "A ordem não importa: C(7,3) = 7! / (3! × (7−3)!) = 35.",
+    "assunto": "Combinação simples"
+  },
+  {
+    "id": "F4-03",
+    "fase": 4,
+    "enunciado": "No Cofre de Seleção, há 8 cartões diferentes. O mecanismo exige escolher 2 deles, sem considerar a ordem. Quantos grupos podem ser formados?",
+    "resposta": 28,
+    "resolucao": "A ordem não importa: C(8,2) = 8! / (2! × (8−2)!) = 28.",
+    "assunto": "Combinação simples"
+  },
+  {
+    "id": "F4-04",
+    "fase": 4,
+    "enunciado": "No Cofre de Seleção, há 9 cristais diferentes. O mecanismo exige escolher 3 deles, sem considerar a ordem. Quantos grupos podem ser formados?",
+    "resposta": 84,
+    "resolucao": "A ordem não importa: C(9,3) = 9! / (3! × (9−3)!) = 84.",
+    "assunto": "Combinação simples"
+  },
+  {
+    "id": "F4-05",
+    "fase": 4,
+    "enunciado": "No Cofre de Seleção, há 10 engrenagens diferentes. O mecanismo exige escolher 2 deles, sem considerar a ordem. Quantos grupos podem ser formados?",
+    "resposta": 45,
+    "resolucao": "A ordem não importa: C(10,2) = 10! / (2! × (10−2)!) = 45.",
+    "assunto": "Combinação simples"
+  },
+  {
+    "id": "F4-06",
+    "fase": 4,
+    "enunciado": "No Cofre de Seleção, há 8 placas diferentes. O mecanismo exige escolher 4 deles, sem considerar a ordem. Quantos grupos podem ser formados?",
+    "resposta": 70,
+    "resolucao": "A ordem não importa: C(8,4) = 8! / (4! × (8−4)!) = 70.",
+    "assunto": "Combinação simples"
+  },
+  {
+    "id": "F4-07",
+    "fase": 4,
+    "enunciado": "No Cofre de Seleção, há 7 mapas diferentes. O mecanismo exige escolher 2 deles, sem considerar a ordem. Quantos grupos podem ser formados?",
+    "resposta": 21,
+    "resolucao": "A ordem não importa: C(7,2) = 7! / (2! × (7−2)!) = 21.",
+    "assunto": "Combinação simples"
+  },
+  {
+    "id": "F4-08",
+    "fase": 4,
+    "enunciado": "No Cofre de Seleção, há 9 peças diferentes. O mecanismo exige escolher 4 deles, sem considerar a ordem. Quantos grupos podem ser formados?",
+    "resposta": 126,
+    "resolucao": "A ordem não importa: C(9,4) = 9! / (4! × (9−4)!) = 126.",
+    "assunto": "Combinação simples"
+  },
+  {
+    "id": "F4-09",
+    "fase": 4,
+    "enunciado": "No Cofre de Seleção, há 10 amostras diferentes. O mecanismo exige escolher 3 deles, sem considerar a ordem. Quantos grupos podem ser formados?",
+    "resposta": 120,
+    "resolucao": "A ordem não importa: C(10,3) = 10! / (3! × (10−3)!) = 120.",
+    "assunto": "Combinação simples"
+  },
+  {
+    "id": "F4-10",
+    "fase": 4,
+    "enunciado": "No Cofre de Seleção, há 6 chaves diferentes. O mecanismo exige escolher 3 deles, sem considerar a ordem. Quantos grupos podem ser formados?",
+    "resposta": 20,
+    "resolucao": "A ordem não importa: C(6,3) = 6! / (3! × (6−3)!) = 20.",
+    "assunto": "Combinação simples"
+  },
+  {
+    "id": "F5-01",
+    "fase": 5,
+    "enunciado": "No corredor final, 5 robôs distintos ficarão em fila. Os robôs A e B devem permanecer lado a lado. Quantas filas são possíveis?",
+    "resposta": 48,
+    "resolucao": "Tratamos A e B como um bloco: há (5−1)! arranjos dos blocos e 2! ordens internas. Total: 2 × (5−1)! = 48.",
+    "assunto": "Permutação com restrição"
+  },
+  {
+    "id": "F5-02",
+    "fase": 5,
+    "enunciado": "No corredor final, 6 robôs distintos ficarão em fila. Os robôs A e B devem permanecer lado a lado. Quantas filas são possíveis?",
+    "resposta": 240,
+    "resolucao": "Tratamos A e B como um bloco: há (6−1)! arranjos dos blocos e 2! ordens internas. Total: 2 × (6−1)! = 240.",
+    "assunto": "Permutação com restrição"
+  },
+  {
+    "id": "F5-03",
+    "fase": 5,
+    "enunciado": "No corredor final, 7 robôs distintos ficarão em fila. Os robôs A e B devem permanecer lado a lado. Quantas filas são possíveis?",
+    "resposta": 1440,
+    "resolucao": "Tratamos A e B como um bloco: há (7−1)! arranjos dos blocos e 2! ordens internas. Total: 2 × (7−1)! = 1440.",
+    "assunto": "Permutação com restrição"
+  },
+  {
+    "id": "F5-04",
+    "fase": 5,
+    "enunciado": "No corredor final, 8 robôs distintos ficarão em fila. Os robôs A e B devem permanecer lado a lado. Quantas filas são possíveis?",
+    "resposta": 10080,
+    "resolucao": "Tratamos A e B como um bloco: há (8−1)! arranjos dos blocos e 2! ordens internas. Total: 2 × (8−1)! = 10080.",
+    "assunto": "Permutação com restrição"
+  },
+  {
+    "id": "F5-05",
+    "fase": 5,
+    "enunciado": "Na central de fuga, 6 técnicos distintos devem formar uma fila, mas A e B não podem ficar lado a lado. Quantas filas são permitidas?",
+    "resposta": 480,
+    "resolucao": "Todas as filas: 6!. Subtraímos as que têm A e B juntos: 2 × (6−1)!. Resultado: 480.",
+    "assunto": "Princípio da exclusão / permutação"
+  },
+  {
+    "id": "F5-06",
+    "fase": 5,
+    "enunciado": "Na central de fuga, 7 técnicos distintos devem formar uma fila, mas A e B não podem ficar lado a lado. Quantas filas são permitidas?",
+    "resposta": 3600,
+    "resolucao": "Todas as filas: 7!. Subtraímos as que têm A e B juntos: 2 × (7−1)!. Resultado: 3600.",
+    "assunto": "Princípio da exclusão / permutação"
+  },
+  {
+    "id": "F5-07",
+    "fase": 5,
+    "enunciado": "Na central de fuga, 8 técnicos distintos devem formar uma fila, mas A e B não podem ficar lado a lado. Quantas filas são permitidas?",
+    "resposta": 30240,
+    "resolucao": "Todas as filas: 8!. Subtraímos as que têm A e B juntos: 2 × (8−1)!. Resultado: 30240.",
+    "assunto": "Princípio da exclusão / permutação"
+  },
+  {
+    "id": "F5-08",
+    "fase": 5,
+    "enunciado": "O último cadeado exige uma equipe de 3 pessoas escolhidas entre 4 pesquisadores e 3 exploradores. É obrigatório haver exatamente 1 pesquisador. Quantas equipes diferentes podem ser formadas?",
+    "resposta": 12,
+    "resolucao": "Escolhemos 1 dos 4 pesquisadores e 2 dos 3 exploradores. Pelo produto: C(4,1) × C(3,2) = 12.",
+    "assunto": "Combinação com restrição"
+  },
+  {
+    "id": "F5-09",
+    "fase": 5,
+    "enunciado": "O último cadeado exige uma equipe de 3 pessoas escolhidas entre 5 pesquisadores e 4 exploradores. É obrigatório haver exatamente 1 pesquisador. Quantas equipes diferentes podem ser formadas?",
+    "resposta": 30,
+    "resolucao": "Escolhemos 1 dos 5 pesquisadores e 2 dos 4 exploradores. Pelo produto: C(5,1) × C(4,2) = 30.",
+    "assunto": "Combinação com restrição"
+  },
+  {
+    "id": "F5-10",
+    "fase": 5,
+    "enunciado": "O último cadeado exige uma equipe de 4 pessoas escolhidas entre 6 pesquisadores e 3 exploradores. É obrigatório haver exatamente 1 pesquisador. Quantas equipes diferentes podem ser formadas?",
+    "resposta": 6,
+    "resolucao": "Escolhemos 1 dos 6 pesquisadores e 3 dos 3 exploradores. Pelo produto: C(6,1) × C(3,3) = 6.",
+    "assunto": "Combinação com restrição"
+  }
+]
